@@ -4,10 +4,10 @@ import qualified Network.Socket.ByteString as B (send,recv)
 
 main::IO()
 main=do
-    handle<-connectTo "127.0.0.1" (PortNumber 5555)
+    handle<-connect 
     hSetBuffering handle LineBuffering
     loop handle 
 
 loop::Handle->IO()
 loop h=do
-    h
+    

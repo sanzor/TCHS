@@ -15,7 +15,7 @@ loop csock=do
     print "Begining of loop"
    -- dat<-B.recv csock 2000
     sent<-B.send  csock $ pack "Hi!!"
-   -- print $ unwords  ["Received :",unpack dat]
+  --  print $ unwords  ["Received :",unpack dat]
     print "End of loop"
     loop csock
     
