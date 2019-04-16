@@ -2,9 +2,6 @@ import Network.Socket
 import qualified Network.Socket.ByteString as B
 import Data.ByteString.Char8(pack,unpack)
 
-
-
-
 main::IO()
 main=do
     sock<-socket AF_INET Stream 0
@@ -15,9 +12,11 @@ main=do
 
 loop::Socket->IO()
 loop csock=do
-    dat<-B.recv csock 1024
-    sent<-B.send  csock $ pack "From Server: i received -"
-    print $ unwords  ["Got",unpack dat]
+    print "Begining of loop"
+   -- dat<-B.recv csock 2000
+    sent<-B.send  csock $ pack "Hi!!"
+   -- print $ unwords  ["Received :",unpack dat]
+    print "End of loop"
     loop csock
     
 

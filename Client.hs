@@ -1,5 +1,6 @@
-import Network(connect,Socket,PortID(..))
-import System.IO(hPutStrLn,hClose,hSetBuffering,BufferMode(..))
+import Data.ByteString.Char8(pack,unpack)
+import Network.Socket
+import qualified Network.Socket.ByteString as B (send,recv)
 
 main::IO()
 main=do

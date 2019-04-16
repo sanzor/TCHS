@@ -1,0 +1,2 @@
+ghc  Server.hs
+./Server 
